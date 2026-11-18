@@ -1,0 +1,41 @@
+{
+  "name": "cloakfree",
+  "version": "1.1.0",
+  "description": "Stealth browser for automation: source-level fingerprint patches, human-like input, local Turnstile tokens. No license key, no account, no session cap.",
+  "main": "index.js",
+  "bin": { "cloakfree": "cli.js" },
+  "exports": {
+    ".": "./index.js",
+    "./turnstile": "./turnstile.js",
+    "./human": "./human.js",
+    "./engine": "./engine.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "engine.js",
+    "human.js",
+    "turnstile.js",
+    "cli.js",
+    "self-check.js",
+    "examples/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node self-check.js",
+    "setup": "node cli.js fetch",
+    "info": "node cli.js info"
+  },
+  "keywords": [
+    "stealth-browser",
+    "antidetect",
+    "playwright",
+    "turnstile",
+    "cloudflare",
+    "fingerprint",
+    "browser-automation"
+  ],
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "dependencies": { "patchright": "^1.56.0" }
+}
